@@ -35,7 +35,7 @@ export default function App() {
         <input type="text" placeholder="Enter email" required />
         <input type="password" placeholder="Enter Password" required />
         <input type="password" placeholder="Enter Confirm password" required />
-        <Captcha setcaptchaverified={setcaptchaverified} />
+        {/* <Captcha setcaptchaverified={setcaptchaverified} /> */}
         {captchaverified && (
           <button onClick={() => submitform()} id="submitconfirm">
             Submit
@@ -43,6 +43,7 @@ export default function App() {
         )}
         {!captchaverified && (
           <>
+          <Captcha setcaptchaverified={setcaptchaverified} />
             <button id="blockedsubmit">Captcha not verified!!</button>
           </>
         )}
